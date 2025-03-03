@@ -1,0 +1,574 @@
+/* ======================== */
+/*      Global Styles      */
+/* ======================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Możesz zmienić na swój kolor */
+    color: #222; /* Dostosowanie koloru tekstu */
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Dzięki temu stopka zawsze pozostanie na dole */
+}
+
+
+/* ======================== */
+/*         Header          */
+/* ======================== */
+/* ======================== */
+/*         Header          */
+/* ======================== */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-icons {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-icons li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-icons a:hover {
+    color: #007bff;
+}
+
+.icon {
+    font-size: 26px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-icons li:hover .icon {
+    transform: scale(1.1);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .nav-icons {
+        gap: 15px;
+    }
+
+    .nav-icons a {
+        font-size: 14px;
+    }
+
+    .icon {
+        font-size: 22px;
+    }
+}
+
+
+/* ======================== */
+/*         Footer          */
+/* ======================== */
+
+.footer {
+    width: 100vw;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Jeśli ma się przesuwać */
+}
+
+
+.footer-content {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Linia oddzielająca */
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #bbbbbb;
+    text-align: center;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+
+
+/* ======================== */
+/*         Home            */
+/* ======================== */
+.home {
+    background: none; /* Usuwa białe tło */
+    padding: 20px; /* Może być mniej */
+    max-width: 100%; /* Dopasowanie do szerokości strony */
+    border-radius: 0; /* Usuwa zaokrąglenia */
+    box-shadow: none; /* Usuwa efekt "kwadratu" */
+}
+
+
+.home h2 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.home h2 span {
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.home .content {
+    border-left: 4px solid #1e73be;
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.home .content p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #1e73be;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #155a9b;
+}
+
+.about-me {
+    padding: 40px;
+    color: #000000;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.about-me h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-me ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-me ul li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.about-me .read-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.about-me .read-more:hover {
+    background: #0056b3;
+}
+
+/* ======================== */
+/*         Service          */
+/* ======================== */
+/* Globalne style sekcji */
+section {
+    max-width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nagłówki */
+h2 {
+    font-size: 28px;
+    color: #333;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Akapit */
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Lista usług */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Pojedyncza usługa */
+
+li {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efekt hover */
+li:hover {
+    transform: translateY(-5px);
+}
+
+/* Podtytuły usług */
+h3 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    li {
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* ======================== */
+/*         Contact          */
+/* ======================== */
+
+.contact-card {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    /*margin-left: 0; !* Usunięcie zbędnego przesunięcia *!*/
+    text-align: center;
+}
+
+.contact-page {
+    padding: 20px;
+}
+.contact-page img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.contact-sidebar {
+    display: none; /* Ukrywa sidebar, jeśli nie jest potrzebny */
+}
+
+
+
+
+/* ======================== */
+/*    Contact  Section */
+/* ======================== */
+/* Sekcja kontaktowa */
+.contact-section {
+    position: relative;
+    background-image: url('assets/images/dzwig.JPG'); /* Zmień na odpowiednią ścieżkę */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    color: white;
+}
+
+/* Nałożony ciemny filtr */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Ciemne tło */
+}
+
+/* Kontener wewnętrzny */
+.contact-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15); /* Półprzezroczyste tło */
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Zdjęcie właściciela */
+.contact-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Nagłówek */
+.contact-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Podpis */
+.contact-title {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* Informacje kontaktowe */
+.contact-info p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* Linki e-mail */
+.contact-info a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Mapa Google */
+.contact-map {
+    width: 100%;
+    height: 250px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contact-name {
+        font-size: 22px;
+    }
+
+    .contact-title {
+        font-size: 16px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .contact-map {
+        height: 200px;
+    }
+}
+
+
+
+/* ======================== */
+/*    Pełna szerokość strony  */
+/* ======================== */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; /* Pełna szerokość */
+}
+
+.main-content {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    .main-content {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+
